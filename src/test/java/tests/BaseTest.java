@@ -34,11 +34,7 @@ public class BaseTest {
     private static final int port = 4723;
     private static final String basePath = "/wd/hub";
 
-    private static final String projectPath = System.getProperty("user.dir");
-
-
     protected DesiredCapabilities jsonCaps;
-    private static final String apkPath = "/Users/omarn/repo/appium-scratch/src/test/resources/ApiDemos-debug.apk";
 
     @BeforeClass
     public void beforeClass() throws IOException, ParseException {
@@ -52,10 +48,17 @@ public class BaseTest {
                 .build();
         service.start();
         jsonCaps  = DesiredCapabilityHelper.getDesiredCapabilities(deviceName);
-        jsonCaps.setCapability("app", String.format(
-                "%s%s/%s", projectPath, appPath, jsonCaps.getCapability("app")
-        ));
-        jsonCaps.getCapability("app");
+        if(jsonCaps.getCapability("app") != null) {
+            jsonCaps.setCapability("app",
+                    String.format(
+                            "%s%s/%s",
+                            System.getProperty("user.dir"),
+                            PropertyHelper.getProperty("appPath"),
+                            jsonCaps.getCapability("app")
+                    )
+            );
+        }
+        System.out.println("appPath:  " + jsonCaps.getCapability("app"));
         dc = jsonCaps;
         driver = new AndroidDriver(new URL(String.format("%s%s:%d%s",protocol, host, port, basePath)), dc);
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
