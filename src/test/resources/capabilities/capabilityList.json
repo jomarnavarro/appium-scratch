@@ -1,0 +1,34 @@
+[
+  {
+    "name": "OnePlusN10",
+    "caps": {
+      "platformName":"Android",
+      "platformVersion":"10",
+      "automationName":"UiAutomator2",
+      "deviceName":"OnePlusN10",
+      "udid":"498be9a0",
+      "app": "ApiDemos-debug.apk"
+    }
+  },
+  {
+    "name": "Pixel6",
+    "caps": {
+      "platformName":"Android",
+      "platformVersion":"13",
+      "automationName":"UiAutomator2",
+      "deviceName":"Pixel6",
+      "udid":"26071FDF6002MH",
+      "app": "ApiDemos-debug.apk"
+    }
+  },
+  {
+    "name": "iPhone12",
+    "caps": {
+      "platformName": "iOS",
+      "deviceName": "iPhone",
+      "automationName": "XCUITest",
+      "udid": "52427F87-DBA6-48AA-AA7C-C798FE2DE806",
+      "app": "UIKitCatalog.app"
+    }
+  }
+]
