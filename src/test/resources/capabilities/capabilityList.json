@@ -18,9 +18,7 @@
       "automationName":"UiAutomator2",
       "deviceName":"Pixel6",
       "udid":"26071FDF6002MH",
-      "app": "ApiDemos-debug.apk",
-      "appPackage": "io.appium.android.apis",
-      "appActivity": "io.appium.android.apis.ApiDemos"
+      "app": "Android.SauceLabs.Mobile.Sample.app.2.7.1.apk"
     }
   },
   {
@@ -31,8 +29,9 @@
       "automationName": "UiAutomator2",
       "deviceName": "Pixel_5_API_33",
       "udid": "emulator-5554",
-      "appPackage": "io.appium.android.apis",
-      "appActivity": "io.appium.android.apis.ApiDemos",
+      "app": "Android.SauceLabs.Mobile.Sample.app.2.2.1.apk",
+      "appPackage": "com.swaglabsmobileapp",
+      "appActivity": "com.swaglabsmobileapp.MainActivity",
       "avd": "Pixel_5_API_33",
       "avdLaunchTimeout": 180000
     }
