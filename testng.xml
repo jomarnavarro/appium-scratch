@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <suite name="Suite" parallel="false">
     <test name="Test">
+        <listeners>
+            <listener class-name="com.tac.listeners.TestListener" />
+        </listeners>
         <classes>
             <class name="com.tac.tests.LoginTests"/>
             <class name="com.tac.tests.ProductTests"/>
