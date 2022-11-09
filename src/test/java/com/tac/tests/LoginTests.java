@@ -5,6 +5,12 @@ import org.testng.annotations.*;
 
 public class LoginTests extends BaseTest{
 
+	@BeforeClass
+	public void beforeClass() {
+		closeApp();
+		launchApp();
+	}
+
   @Test
   public void invalidUserName() {
 	  loginPage.enterUserName("invalidusername");

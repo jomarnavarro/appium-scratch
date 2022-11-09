@@ -1,6 +1,5 @@
 package com.tac.pages;
 
-import com.tac.tests.AppiumBasic;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;

@@ -1,6 +1,9 @@
 package com.tac.tests;
 
+import com.tac.pages.LoginPage;
+import com.tac.pages.MenuPage;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -9,14 +12,22 @@ import java.lang.reflect.Method;
 
 public class ProductTests extends BaseTest {
 
+    @BeforeClass
+    public void beforeClass() {
+        closeApp();
+        launchApp();
+    }
+
     @BeforeMethod
     public void beforeMethod(Method m) {
         System.out.println("\n" + "****** starting test:" + m.getName() + "******" + "\n");
+        loginPage = new LoginPage(getDriver());
         productsPage = loginPage.login("standard_user", "secret_sauce");
     }
 
     @AfterMethod
     public void afterMethod() {
+        menuPage = new MenuPage(getDriver());
         settingsPage = menuPage.pressSettingsBtn();
         loginPage = settingsPage.pressLogoutBtn();
     }

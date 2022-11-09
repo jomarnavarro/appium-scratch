@@ -7,7 +7,9 @@
       "automationName":"UiAutomator2",
       "deviceName":"OnePlusN10",
       "udid":"498be9a0",
-      "app": "ApiDemos-debug.apk"
+      "app": "Android.SauceLabs.Mobile.Sample.app.2.2.1.apk",
+      "appPackage": "com.swaglabsmobileapp",
+      "appActivity": "com.swaglabsmobileapp.MainActivity"
     }
   },
   {
@@ -18,7 +20,9 @@
       "automationName":"UiAutomator2",
       "deviceName":"Pixel6",
       "udid":"26071FDF6002MH",
-      "app": "Android.SauceLabs.Mobile.Sample.app.2.7.1.apk"
+      "app": "Android.SauceLabs.Mobile.Sample.app.2.2.1.apk",
+      "appPackage": "com.swaglabsmobileapp",
+      "appActivity": "com.swaglabsmobileapp.MainActivity"
     }
   },
   {
